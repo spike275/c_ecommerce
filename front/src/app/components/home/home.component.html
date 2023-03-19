@@ -1,0 +1,21 @@
+ghghghghg
+
+
+
+<form (submit)="onSubmit()" enctype="multipart/form-data">
+    <input type="file" name="photo" (change)="onFileSelected($event)" /> 
+    <button type="submit">
+      Upload
+    </button>
+    <br />
+    <br />
+    <div *ngIf="isUploading">
+      Uploading...
+    </div>
+    <div *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+    <div *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+  </form>

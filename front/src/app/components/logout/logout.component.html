@@ -1,0 +1,10 @@
+<div *ngIf="isAuthenticated">
+    <h2>Are you sure you want to log out?</h2>
+    <button class="btn btn-primary" (click)="logout()">Logout</button>
+  </div>
+  
+  <div *ngIf="!isAuthenticated">
+    <h2>You are already logged out</h2>
+    <a routerLink="/login">Login</a>
+  </div>
+  

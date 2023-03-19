@@ -1,0 +1,35 @@
+<div [@routerTransition] class="login-page">
+    <div class="row justify-content-md-center">
+      <div class="col-md-4">
+        <img class="user-avatar" src="assets/images/WhatsApp Image 2023-02-25 at 12.27.13.jpeg" width="300px" />
+        <h1>Reut Cosmetics</h1>
+        <form role="form" (ngSubmit)="login(username.value, password.value)">
+          <div class="form-content">
+            <div class="form-group">
+              <input
+                [placeholder]="'Username'"
+                class="form-control input-underline input-lg"
+                type="text"
+                #username
+                required
+              />
+            </div>
+  
+            <div class="form-group">
+              <input
+                [placeholder]="'Password'"
+                class="form-control input-underline input-lg"
+                type="password"
+                #password
+                required
+              />
+            </div>
+          </div>
+  
+          <button type="submit" class="btn rounded-btn">{{ 'Login' }}</button>
+          <a routerLink="/register" class="btn rounded-btn">{{'Register'}}</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  
